@@ -1,30 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARDice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JtZ-yE-KHy">
+                                <rect key="frame" x="0.0" y="783.66666666666663" width="393" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gnc-4j-8dw">
+                                        <rect key="frame" x="0.0" y="0.0" width="72.333333333333329" height="34.333333333333336"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="lightTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearDidTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="b6N-5d-V2k"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J46-t0-7b4">
+                                        <rect key="frame" x="80.333333333333329" y="0.0" width="71.999999999999986" height="34.333333333333336"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <color key="tintColor" systemColor="lightTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Run"/>
+                                        <connections>
+                                            <action selector="runDidTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="L7X-s5-57M"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3MD-Sk-Bkd">
+                                        <rect key="frame" x="160.33333333333334" y="0.0" width="72.333333333333343" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" systemColor="lightTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cube"/>
+                                        <connections>
+                                            <action selector="cubeDidTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="WyV-Gk-oQU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDw-KE-M1u">
+                                        <rect key="frame" x="240.66666666666663" y="0.0" width="72" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" systemColor="lightTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Dice"/>
+                                        <connections>
+                                            <action selector="diceDidTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="0RP-pc-X9c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub8-dY-Pui">
+                                        <rect key="frame" x="320.66666666666669" y="0.0" width="72.333333333333314" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" systemColor="lightTextColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Sun"/>
+                                        <connections>
+                                            <action selector="sunDidTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="K5n-0u-dta"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="U0K-SW-4ec" secondAttribute="trailing" id="Jnl-Cp-WW0"/>
+                            <constraint firstItem="JtZ-yE-KHy" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="MDA-4t-dhG"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="U0K-SW-4ec" secondAttribute="bottom" id="OLU-rx-p1P"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="U0K-SW-4ec" secondAttribute="leading" id="RDw-nM-dgd"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="JtZ-yE-KHy" secondAttribute="trailing" id="drz-wa-qXC"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="pL8-Fi-9Wl"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="bottom" secondItem="JtZ-yE-KHy" secondAttribute="bottom" id="r0w-CG-Wcp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
@@ -32,6 +94,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="lightTextColor">
+            <color white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
